@@ -24,7 +24,7 @@ def follow(path):
 def main(path):
     latest_file = get_lastest_file(path)
     print(latest_file)
-    logfile = open(latest_file, "r")
+    logfile = open(latest_file, "r", encoding="utf8", errors="ignore")
     loglines = follow(logfile)
     for line in loglines:
         dateTimeObj = datetime.now()
